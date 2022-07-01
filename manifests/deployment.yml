@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jimmybpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jimmybpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: jimmybpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jimmybpipelinesjavascriptdocker 
+          image: myacrtgos.azurecr.io/jimmybpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
